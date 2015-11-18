@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Carros</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Strings da Aplicação -->
+    <string name="nome">Carro</string>
+    <string name="marca">Fabricante</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="cadastro_sucesso">Carro salvo com sucesso.</string>
+    <string name="cadastro_erro">Alguma coisa que não está certo deu errado! :-)</string>
+</resources>
