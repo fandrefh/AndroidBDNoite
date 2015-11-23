@@ -48,7 +48,7 @@ public class ListaCarrosActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 database = carrosDB.getReadableDatabase();
-                String[] campos = {"_id", "nome", "marca"};
+                String[] campos = {"nome", "marca", "_id"};
                 Cursor cursor = database.query("carro", campos, null, null, null, null, null);
                 if (cursor.getCount() > 0) {
                     dataSource = new SimpleCursorAdapter(getApplicationContext(), R.layout.item_lista, cursor, campos, new int[] {R.id.txtNomeCarro, R.id.txtMarcaCarro}, 0);
