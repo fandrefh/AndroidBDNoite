@@ -61,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
                     edtNomeCarro.setText("");
                     edtMarcaCarro.setText("");
                     edtNomeCarro.requestFocus();
+                    Intent intent = new Intent(MainActivity.this, ListaCarrosActivity.class);
+                    startActivity(intent);
                 } else {
                     Toast.makeText(getApplicationContext(), getString(R.string.cadastro_erro), Toast.LENGTH_LONG).show();
                 }

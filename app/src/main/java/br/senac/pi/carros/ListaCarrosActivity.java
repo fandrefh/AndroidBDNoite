@@ -28,6 +28,7 @@ public class ListaCarrosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_lista_carros);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         carrosDB = new CarrosDB(this);
 
@@ -40,24 +41,19 @@ public class ListaCarrosActivity extends AppCompatActivity {
             }
         });
         listView = (ListView) findViewById(R.id.listView);
-        findViewById(R.id.listarCarros).setOnClickListener(listarCarros());
+        listarCarros();
     }
 
-    private View.OnClickListener listarCarros() {
-        return new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                database = carrosDB.getReadableDatabase();
-                String[] campos = {"nome", "marca", "_id"};
-                Cursor cursor = database.query("carro", campos, null, null, null, null, null);
-                if (cursor.getCount() > 0) {
-                    dataSource = new SimpleCursorAdapter(getApplicationContext(), R.layout.item_lista, cursor, campos, new int[] {R.id.txtNomeCarro, R.id.txtMarcaCarro}, 0);
-                    listView.setAdapter(dataSource);
-                } else {
-                    Toast.makeText(getApplicationContext(), getString(R.string.zero_registro), Toast.LENGTH_LONG).show();
-                }
-            }
-        };
+    private void listarCarros() {
+        database = carrosDB.getReadableDatabase();
+        String[] campos = {"nome", "marca", "_id"};
+        Cursor cursor = database.query("carro", campos, null, null, null, null, null);
+        if (cursor.getCount() > 0) {
+            dataSource = new SimpleCursorAdapter(getApplicationContext(), R.layout.item_lista, cursor, campos, new int[] {R.id.txtNomeCarro, R.id.txtMarcaCarro}, 0);
+            listView.setAdapter(dataSource);
+        } else {
+            Toast.makeText(getApplicationContext(), getString(R.string.zero_registro), Toast.LENGTH_LONG).show();
+        }
     }
 
 }
