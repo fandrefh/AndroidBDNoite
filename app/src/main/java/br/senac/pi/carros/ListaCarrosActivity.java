@@ -82,7 +82,10 @@ public class ListaCarrosActivity extends AppCompatActivity {
                 builder.setPositiveButton(getString(R.string.opcao_editar), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getApplicationContext(), "Clicou no Editar", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(ListaCarrosActivity.this, AtualizarCarroActivity.class);
+                        intent.putExtra("idCarro", String.valueOf(itemSelecionado));
+                        startActivity(intent);
+                        finish();
                     }
                 });
                 AlertDialog dialog = builder.create();

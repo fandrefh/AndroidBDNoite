@@ -15,4 +15,6 @@
     <string name="menssagem_alert">O que deseja fazer?</string>
     <string name="opcao_delete">Deletar</string>
     <string name="opcao_editar">Editar</string>
+    <string name="title_activity_atualizar_carro">Atualizar Carro</string>
+    <string name="atualizar">Atualizar</string>
 </resources>

@@ -21,8 +21,13 @@
         <activity
             android:name=".ListaCarrosActivity"
             android:label="@string/title_activity_lista_carros"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".AtualizarCarroActivity"
+            android:label="@string/title_activity_atualizar_carro"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
     </application>
 
