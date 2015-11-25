@@ -11,4 +11,8 @@
     <string name="title_activity_lista_carros">Lista de Carros</string>
     <string name="listar_carros">Lista carros</string>
     <string name="zero_registro">Nenhum registro encontrado.</string>
+    <string name="titulo_alert">Pergunta</string>
+    <string name="menssagem_alert">O que deseja fazer?</string>
+    <string name="opcao_delete">Deletar</string>
+    <string name="opcao_editar">Editar</string>
 </resources>
