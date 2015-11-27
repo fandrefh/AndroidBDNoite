@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -53,8 +54,17 @@ public class MainActivity extends AppCompatActivity {
                 ContentValues values = new ContentValues();
                 EditText edtNomeCarro = (EditText) findViewById(R.id.edtNomeCarro);
                 EditText edtMarcaCarro = (EditText) findViewById(R.id.edtMarcaCarro);
+                RadioGroup radioGroup = (RadioGroup) findViewById(R.id.rgTipoCarro);
                 values.put("nome", edtNomeCarro.getText().toString());
                 values.put("marca", edtMarcaCarro.getText().toString());
+                int idTipoCarro = radioGroup.getCheckedRadioButtonId();
+                String modelo;
+                if (idTipoCarro == R.id.rbSedan) {
+                    modelo = "Sedan";
+                } else {
+                    modelo = "Hatch";
+                }
+                values.put("tipo_carro", modelo);
                 long id = database.insert("carro", null, values);
                 if (id != 0) {
                     Toast.makeText(getApplicationContext(), getString(R.string.cadastro_sucesso), Toast.LENGTH_LONG).show();

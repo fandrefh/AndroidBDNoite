@@ -34,6 +34,20 @@
                 android:textColor="#000"/>
 
         </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tipo_carro"
+                android:textColor="#000"
+                android:layout_marginRight="10dp"/>
+            <TextView
+                android:id="@+id/txtTipoCarro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"/>
+
+        </TableRow>
     </TableLayout>
 
 </LinearLayout>

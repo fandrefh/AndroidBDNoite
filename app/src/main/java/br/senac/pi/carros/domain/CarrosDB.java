@@ -13,7 +13,7 @@ import java.security.PrivateKey;
 public class CarrosDB extends SQLiteOpenHelper {
 
     private static final String NOME_BANCO = "cursoandroid.db";
-    private static final int VERSAO_BANCO = 1;
+    private static final int VERSAO_BANCO = 2;
     private static final String TAG = "curso";
 
     public CarrosDB(Context context) {
@@ -30,6 +30,6 @@ public class CarrosDB extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL("ALTER TABLE carro ADD COLUMN tipo_carro TEXT;");
     }
 }

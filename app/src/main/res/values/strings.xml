@@ -17,4 +17,9 @@
     <string name="opcao_editar">Editar</string>
     <string name="title_activity_atualizar_carro">Atualizar Carro</string>
     <string name="atualizar">Atualizar</string>
+    <string name="sucesso_atualizar_carro">Carro atualizado com sucesso!</string>
+    <string name="erro_atualizar_carro">Carro não pode ser atualizado!</string>
+    <string name="tipo_carro">Tipo de carro</string>
+    <string name="sedan">Sedan</string>
+    <string name="hatch">Hatch</string>
 </resources>

@@ -28,7 +28,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"/>
+    <RadioGroup
+        android:id="@+id/rgAtualizarTipoCarro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rbAtualizarSedan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sedan"/>
+        <RadioButton
+            android:id="@+id/rbAtualizarHatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hatch"/>
+    </RadioGroup>
     <Button
+        android:id="@+id/btnAtualizarCarro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/atualizar"/>

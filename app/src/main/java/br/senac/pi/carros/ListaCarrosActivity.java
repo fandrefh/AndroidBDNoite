@@ -25,7 +25,7 @@ public class ListaCarrosActivity extends AppCompatActivity {
     private SQLiteDatabase database;
     private CursorAdapter dataSource;
     private ListView listView;
-    private String[] campos = {"nome", "marca", "_id"};
+    private String[] campos = {"nome", "marca", "tipo_carro", "_id"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +55,7 @@ public class ListaCarrosActivity extends AppCompatActivity {
     private void listarCarros() {
         Cursor cursor = database.query("carro", campos, null, null, null, null, null);
         if (cursor.getCount() > 0) {
-            dataSource = new SimpleCursorAdapter(getApplicationContext(), R.layout.item_lista, cursor, campos, new int[] {R.id.txtNomeCarro, R.id.txtMarcaCarro}, 0);
+            dataSource = new SimpleCursorAdapter(getApplicationContext(), R.layout.item_lista, cursor, campos, new int[] {R.id.txtNomeCarro, R.id.txtMarcaCarro, R.id.txtTipoCarro}, 0);
             listView.setAdapter(dataSource);
         } else {
             Toast.makeText(getApplicationContext(), getString(R.string.zero_registro), Toast.LENGTH_LONG).show();

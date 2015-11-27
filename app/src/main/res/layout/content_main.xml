@@ -28,6 +28,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tipo_carro"/>
+    <RadioGroup
+        android:id="@+id/rgTipoCarro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rbSedan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sedan"/>
+        <RadioButton
+            android:id="@+id/rbHatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hatch"/>
+    </RadioGroup>
     <Button
         android:id="@+id/btnCadastrarCarro"
         android:layout_width="match_parent"
